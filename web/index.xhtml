@@ -1,12 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Carrito de Compras</title>
+        <h:link rel="stylesheet" hreflang="style.css"></h:link>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:form>
+            <section id="portada" class="portada"></section>
+            <img src="Imagenes/FondoPrincipal.jpg" width="800" height="600" alt="fondo" class="fondo" id="fondo"></img>
+            <div id="encabezado_contenedor" class="encabezado_contenedor">
+                <h1>Iniciar sesión</h1> 
+            </div>
+            <div id="cuerpo_contenedor" class="cuerpo_contenedor">
+                <div id="Usuario" class="Usuario">
+                    <h3>Nombre</h3>
+                    <h:inputText value="#" class="txtNombre"/>
+                </div>
+                <div id="Contraseña" class="Contraseña">
+                    <h3>Contraseña</h3>
+                    <h:inputText type="password" value="#" class="txtContrasena"/>
+                </div>
+                <div id="Boton_Ingreso">
+                    <p:commandButton value="Ingresar" action="#" class="BTN_ingresar_usuario" />
+                </div>
+                <div id="Logo">
+                    <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"></img>
+                </div>
+            </div>
+        </h:form>
     </h:body>
 </html>
 
