@@ -5,15 +5,16 @@
  */
 package pq2;
 
-import pq3.Usuario;
+import beans.indexBean;
+
 
 /**
  *
  * @author santiagob20
  */
 public interface InterfaceUsuarios {
-    public boolean consultar(Usuario us);
-    public void insertar(Usuario us);
-    public void editar(Usuario us);
-    public void eliminar(Usuario us);
+    public boolean consultar(indexBean us);
+    public void insertar(indexBean us);
+    public void editar(indexBean us);
+    public void eliminar(indexBean us);
 }
