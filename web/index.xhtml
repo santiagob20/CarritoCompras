@@ -17,14 +17,14 @@
             <div id="cuerpo_contenedor" class="cuerpo_contenedor">
                 <div id="Usuario" class="Usuario">
                     <h3>Nombre</h3>
-                    <h:inputText value="#" class="txtNombre"/>
+                    <h:inputText value="#{indexBean.user}" class="txtNombre"/>
                 </div>
                 <div id="Contraseña" class="Contraseña">
                     <h3>Contraseña</h3>
-                    <h:inputText type="password" value="#" class="txtContrasena"/>
+                    <h:inputSecret value="#{indexBean.password}" class="txtContrasena"/>
                 </div>
                 <div id="Boton_Ingreso">
-                    <p:commandButton value="Ingresar" action="#" class="BTN_ingresar_usuario" />
+                    <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="BTN_ingresar_usuario" />
                 </div>
                 <div id="Logo">
                     <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"></img>
