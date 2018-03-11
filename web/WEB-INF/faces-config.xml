@@ -7,7 +7,15 @@
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>login</from-outcome>
-            <to-view-id>/Principal.html</to-view-id>
+            <to-view-id>/Principal.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/registrar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>insertado</from-outcome>
+            <to-view-id>/Principal.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
     </navigation-rule>

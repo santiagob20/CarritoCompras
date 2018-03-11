@@ -5,6 +5,7 @@
  */
 package pq1;
 
+import beans.registrarBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +23,7 @@ import pq3.Producto;
 public class OperProductos implements InterfaceProducto {
 
     @Override
-    public void insertar(Producto p) {
+    public void insertar(registrarBean p) {
         Conexion cn = new Conexion();
         
         if(cn!=null){
@@ -44,17 +45,17 @@ public class OperProductos implements InterfaceProducto {
     }
 
     @Override
-    public List<Producto> consultar(Producto p) {
+    public List<registrarBean> consultar(registrarBean p) {
         return null;
     }
 
     @Override
-    public void editar(Producto p) {
+    public void editar(registrarBean p) {
     
     }
 
     @Override
-    public void eliminar(Producto p) {
+    public void eliminar(registrarBean p) {
     
     }
     

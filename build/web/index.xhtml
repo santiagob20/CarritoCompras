@@ -3,19 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-<<<<<<< HEAD
-=======
-        
->>>>>>> beans
+
     <h:head>
         <title>Carrito de Compras</title>
-        <h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <!--<h:link rel="stylesheet" hreflang="style.css"></h:link>-->
+        <h:outputStylesheet library="css" name="style.css"/>
     </h:head>
     <h:body>
-<<<<<<< HEAD
-=======
 
->>>>>>> beans
         <h:form>
             <section id="portada" class="portada"></section>
             <img src="Imagenes/FondoPrincipal.jpg" width="800" height="600" alt="fondo" class="fondo" id="fondo"></img>
@@ -25,11 +20,11 @@
             <div id="cuerpo_contenedor" class="cuerpo_contenedor">
                 <div id="Usuario" class="Usuario">
                     <h3>Nombre</h3>
-                    <h:inputText value="#{indexBean.user}" class="txtNombre"/>
+                    <p:inputText value="#{indexBean.user}" class="txtNombre"/>
                 </div>
                 <div id="Contraseña" class="Contraseña">
                     <h3>Contraseña</h3>
-                    <h:inputSecret value="#{indexBean.password}" class="txtContrasena"/>
+                    <p:inputSecret value="#{indexBean.password}" class="txtContrasena"/>
                 </div>
                 <div id="Boton_Ingreso">
                     <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="BTN_ingresar_usuario" />
