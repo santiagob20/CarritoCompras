@@ -20,26 +20,15 @@ import javax.sql.DataSource;
  * @author santiagob20
  */
 public class Conexion {
+  String user="admin";
+  String password="admin";
     
-    public Connection conectar(){
-        try {
-            InitialContext icon = new InitialContext();
-            Context conte = (Context) icon.lookup("java:comp/env");
-            DataSource data = (DataSource) conte.lookup("jndiprueba");
-            return data.getConnection();
-        } catch (NamingException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
  
     public Connection conectarseX(){
         try {
             
             Class.forName("org.postgresql.Driver");
-            Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","admin","admin");
+            Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/compras",user,password);
             return c;
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);

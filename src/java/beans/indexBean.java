@@ -6,6 +6,7 @@
 package beans;
 
 import javax.faces.bean.ManagedBean;
+import pq1.OperUser;
 import pq3.Usuario;
 
 /**
@@ -14,22 +15,20 @@ import pq3.Usuario;
  */
 @ManagedBean
 public class indexBean {
-    private String usuario;
+    private String user;
     private String password;
     
-    Usuario user = new Usuario();
+    OperUser op = new OperUser();
 
-    public indexBean(String usuario, String password) {
-        this.usuario = usuario;
-        this.password = password;
+
+
+
+    public String getUser() {
+        return user;
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {
@@ -42,10 +41,12 @@ public class indexBean {
     
     public String validarLogin()
     {
+        
+        
         String result="";
-        if(usuario.equals(user.getUser()) && password.equals(user.getPassword()))
+        if(op.consultar(indexBean.this))
         {
-         result= "Principal.xhtml";
+         result= "login";
         }
         return result; 
     }

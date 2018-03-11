@@ -5,6 +5,7 @@
  */
 package pq1;
 
+import beans.indexBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +23,7 @@ public class OperUser implements InterfaceUsuarios {
  
     
     @Override
-    public boolean consultar(Usuario us){
+    public boolean consultar(indexBean us){
         Conexion cn = new Conexion();
         
         Connection c = cn.conectarseX();
@@ -61,17 +62,38 @@ public class OperUser implements InterfaceUsuarios {
     }
 
     @Override
-    public void insertar(Usuario us) {
+    public void insertar(indexBean us) {
+        Conexion cn = new Conexion();
+        
+        Connection c = cn.conectarseX();
+        System.out.println(us.getUser()+"----"+us.getPassword());
+        
+        if(c!=null){
+            
+        try
+        {
+            cn.conectarseX();
+            System.out.println("conectado!");
+            PreparedStatement st = c.prepareStatement("INSERT  INTO usuario VALUES(?,?)");
+            st.setString(1,us.getUser());
+            st.setString(2,us.getPassword());
+            st.executeUpdate();
+            
+            System.out.println(us.getUser());
+            System.out.println(us.getPassword());
+        }catch (SQLException ex) {
+            Logger.getLogger(OperUser.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
+    }
+
+    @Override
+    public void editar(indexBean us) {
         
     }
 
     @Override
-    public void editar(Usuario us) {
-        
-    }
-
-    @Override
-    public void eliminar(Usuario us) {
+    public void eliminar(indexBean us) {
         
     }
 }
