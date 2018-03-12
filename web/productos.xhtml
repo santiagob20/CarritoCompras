@@ -5,19 +5,34 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Productos</title>
-        <!--<h:link rel="stylesheet" hreflang="style.css"></h:link>-->
-        <h:outputStylesheet library="css" name="style.css"/>
+	<h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+	<h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:outputStylesheet library="css" name="style.css"  />
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styleProductos.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
         <h:form>
-            <p:growl id="msg" showDetail="true" escape="false" />
-
-            <h3 style="margin-top: 0">Listado de productos</h3>
-            <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />
-
-            <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="PF('cityDialog').show()" style="margin-top:5px" />
+            <h:body>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container">
+                            <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+                            <div class="Btn_salir">
+                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location='index.xhtml'"></img>	
+                            </div>
+                            <!--<div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
+                                <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="253" height="auto"></img>	
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!--<p:growl id="msg" showDetail="true" escape="false" />
+                <h3 style="margin-top: 0">Listado de productos</h3>
+                <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />
+                <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="PF('cityDialog').show()" style="margin-top:5px" />-->
+            </h:body>
         </h:form>
-
     </h:body>
 </html>
 

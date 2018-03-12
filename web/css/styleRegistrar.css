@@ -1,0 +1,101 @@
+body{
+    font-family: 'Allerta', sans-serif;
+    background-color: black;
+}
+
+.portada{
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.fondo{
+    position: absolute;
+    z-index: 1;
+}
+
+.contenedor {
+    position: absolute;
+    background-color: white;
+    margin: 97px 0px 0px 229px;
+    padding-left: 0px;
+    width: 335px;
+    height: 435px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.encabezado_contenedor{
+    height: 100px;
+    border-bottom: solid;
+    background-color: rgb(0, 0, 51); 
+}
+
+.encabezado_contenedor h1{
+    color: white;
+    padding: 36px 0px 0px 58px;
+    font-size: 26px;
+    margin: 0px;
+}
+
+.cuerpo_contenedor{
+    height: max-content;
+}
+
+.contenedor h3{
+    margin: 0px 16px 25px 25px;
+}
+
+input{
+    width: 132px;
+    height: 27px;
+}
+
+.BotonRegisttar{
+    font-style: oblique;
+    padding: 9px 0px 10px 0px;
+    border-radius: 8px;
+}
+
+.logo_carro{
+    margin: 15px 0px 0px 120px
+}
+
+.Producto{
+    font-size: 17px;
+    display: -webkit-box;
+    margin: 42px 0px 0px 13px;
+}
+
+.Precio{
+    font-size: 17px;
+    display: -webkit-box;
+    margin: -1px 0px 0px 42px;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    margin: -5px 0px 0px 176px;
+}
+
+
+.BotonRegisttar{
+    font-style: oblique;
+    padding: 23px 0px 0px 124px;
+    border-radius: 8px;
+}
+
+.BTN_ingresar_usuario{
+    padding: 6px 6px 6px 6px;
+}
+
+/*.BtnSalir{
+    position: absolute;
+    margin: 36px 0px 0px 236px;
+    z-index: 2;
+    opacity: 0.8;
+    cursor: pointer;
+}*/
+
+

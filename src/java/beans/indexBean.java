@@ -40,9 +40,7 @@ public class indexBean {
     }
     
     public String validarLogin()
-    {
-        
-        
+    {        
         String result="";
         if(op.consultar(indexBean.this))
         {
