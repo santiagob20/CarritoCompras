@@ -23,7 +23,7 @@ public class Conexion {
   String user="admin";
   String password="admin";
     
- 
+ public static Connection c;
     public Connection conectarseX(){
         try {
             
@@ -35,6 +35,18 @@ public class Conexion {
         }
         return null;
        
+    }
+
+    public void desconectarse() {
+        if(c!=null){
+            try {
+                if(!c.isClosed()){
+                    c.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 }
     
