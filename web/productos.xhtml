@@ -12,13 +12,15 @@
         <link href="css/styleProductos.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-        <h:form>
-            <h:body>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="container">
-                            <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+        <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+        <section class="portada">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="container">
+                    <h:form>  
+                        <div class="contenedorBotones">
                             <div class="Btn_salir">
+<<<<<<< HEAD
                                 <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>	
                             </div>
                             <div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
@@ -56,15 +58,25 @@
                                     </table>
                                 </body>
                             </div>
+=======
+                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location='index.xhtml'"></img>	
+                            </div>
+
+>>>>>>> e18f88d740bf37a624f0497049e3cda321da9662
                         </div>
-                    </div>
+                    </h:form>
                 </div>
-                <!--<p:growl id="msg" showDetail="true" escape="false" />
-                <h3 style="margin-top: 0">Listado de productos</h3>
-                <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />
-                <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="PF('cityDialog').show()" style="margin-top:5px" />-->
-            </h:body>
-        </h:form>
+                <div class="col-lg-4"></div>
+            </div>
+        </section>
     </h:body>
+    <!--<div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
+    <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="253" height="auto"></img>	
+    </div>-->
+
+    <!--<p:growl id="msg" showDetail="true" escape="false" />
+    <h3 style="margin-top: 0">Listado de productos</h3>
+    <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />
+    <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="PF('cityDialog').show()" style="margin-top:5px" />-->
 </html>
 
