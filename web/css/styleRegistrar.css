@@ -98,4 +98,10 @@ input{
     cursor: pointer;
 }*/
 
+.txtNombre{
+    font-size: 12px;
+}
 
+.txtPrecio{
+  font-size: 12px;  
+} 

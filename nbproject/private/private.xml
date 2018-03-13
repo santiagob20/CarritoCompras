@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/registrar.xhtml</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/productos.xhtml</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq1/OperProductos.java</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/Principal.xhtml</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq1/OperUser.java</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/beans/registrarBean.java</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/beans/indexBean.java</file>
+            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/WEB-INF/faces-config.xml</file>
+        </group>
     </open-files>
 </project-private>

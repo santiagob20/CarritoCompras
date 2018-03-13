@@ -5,8 +5,8 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Registrar Productos</title>
-	<h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
-	<h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+        <h:link rel="stylesheet" hreflang="style.css"></h:link>
         <h:outputStylesheet library="css" name="style.css"  />
         <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styleRegistrar.css" rel="stylesheet" type="text/css"/>
@@ -14,35 +14,38 @@
     <h:body>
         <h:form>
             <h:body>
-                
+
                 <div class="container">
                     <div class="col-md-12">
                         <div class="BtnSalir">
-                            <img src="Imagenes/salir.png" alt="Boton_Pagar" class="BtnSalir" width="90" height="auto" onclick="location='index.xhtml'"></img>
+                            <img src="Imagenes/salir.png" alt="Boton_Pagar" class="BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>
                         </div>
                         <div class="container">
                             <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
-                            <div class="contenedor">
-                                <div class="encabezado_contenedor">
-                                    <h1>Registrar Producto</h1>
+                            
+                            <h:form>
+                                <div class="contenedor">
+                                    <div class="encabezado_contenedor">
+                                        <h1>Registrar Producto</h1>
+                                    </div>
+                                    <div class="cuerpo_contenedor">
+                                        <div class="Producto">
+                                            <h3>Producto</h3>
+                                            <p:inputText value="#{registrarBean.nombreP}" class="txtNombre"/>
+                                        </div>
+                                        <div class="Precio">
+                                            <h3>Precio</h3>
+                                            <p:inputText value="#{registrarBean.precio}" class="txtPrecio"/>
+                                        </div>
+                                        <div class="BotonRegisttar center-block">
+                                            <p:commandButton type="submit" value="Registrar"  action="#{registrarBean.registrarP()}" class="BTN_ingresar_usuario" />
+                                        </div>
+                                        <div id="Logo">
+                                            <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"/>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="cuerpo_contenedor">
-                                    <div class="Producto">
-                                        <h3>Producto</h3>
-                                        <p:inputText class="txtNombre"/>
-                                    </div>
-                                    <div class="Precio">
-                                        <h3>Precio</h3>
-                                        <p:inputText value="" class="txtPrecio"/>
-                                    </div>
-                                    <div class="BotonRegisttar center-block">
-                                        <p:commandButton type="submit" value="Registrar" class="BTN_ingresar_usuario" />
-                                    </div>
-                                    <div id="Logo">
-                                        <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"/>
-                                    </div>
-                                </div>
-                            </div>
+                            </h:form>
                         </div>
                     </div>
                 </div>

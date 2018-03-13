@@ -8,32 +8,42 @@
         <title>Carrito de Compras</title>
         <!--<h:link rel="stylesheet" hreflang="style.css"></h:link>-->
         <h:outputStylesheet library="css" name="style.css"/>
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styleIndex.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-
-        <h:form>
-            <section id="portada" class="portada"></section>
-            <img src="Imagenes/FondoPrincipal.jpg" width="800" height="600" alt="fondo" class="fondo" id="fondo"></img>
-            <div id="encabezado_contenedor" class="encabezado_contenedor">
-                <h1>Iniciar sesión</h1> 
+        <div class="row">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="container">
+                        <img src="Imagenes/FondoPrincipal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+                        <h:form>
+                            <div class="contenedor">
+                                <div class="encabezado_contenedor">
+                                    <h1>Iniciar sesión</h1> 
+                                </div>
+                                <div class="cuerpo_contenedor">
+                                    <div class="Usuario nomre">
+                                        <h3>Nombre</h3>
+                                        <p:inputText value="#{indexBean.user}" class="txtNombre" placeholder="ingrese su usuario"/>
+                                    </div>
+                                    <div class="Contraseña">
+                                        <h3>Contraseña</h3>
+                                        <p:inputText type="password" value="#{indexBean.password}" class="txtContrasena" placeholder="ingrese contraseña"/>
+                                    </div>
+                                    <div id="Boton_Ingreso">
+                                        <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="BTN_ingresar_usuario center-block" />
+                                    </div>
+                                    <div id="Logo">
+                                        <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="img-rounded logo_carro"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
             </div>
-            <div id="cuerpo_contenedor" class="cuerpo_contenedor">
-                <div id="Usuario" class="Usuario">
-                    <h3>Nombre</h3>
-                    <p:inputText value="#{indexBean.user}" class="txtNombre"/>
-                </div>
-                <div id="Contraseña" class="Contraseña">
-                    <h3>Contraseña</h3>
-                    <p:inputText type="password" value="#{indexBean.password}" class="txtContrasena"/>
-                </div>
-                <div id="Boton_Ingreso">
-                    <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="BTN_ingresar_usuario" />
-                </div>
-                <div id="Logo">
-                    <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"></img>
-                </div>
-            </div>
-        </h:form>
+        </div>
     </h:body>
 </html>
 
