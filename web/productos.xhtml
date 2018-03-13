@@ -5,8 +5,8 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Productos</title>
-	<h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
-	<h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+        <h:link rel="stylesheet" hreflang="style.css"></h:link>
         <h:outputStylesheet library="css" name="style.css"  />
         <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styleProductos.css" rel="stylesheet" type="text/css"/>
@@ -19,11 +19,43 @@
                         <div class="container">
                             <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
                             <div class="Btn_salir">
-                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location='Principal.xhtml'"></img>	
+                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>	
                             </div>
-                            <!--<div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
-                                <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="253" height="auto"></img>	
-                            </div>-->
+                            <div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
+                                <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="150" height="auto"></img>	
+                                <head>
+                                    <title>Productos de la tienda virtual</title>
+                                </head>
+                                <body>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                <td> Precio</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $connect = pg_connect("localhost", "admin", "admin");
+                                            if (!$connect) {
+                                            die(pg_error());
+                                            }
+                                            pg_select_db("compras");
+                                            $results = pg_query("SELECT * FROM producto");
+                                            while($row = pg_fetch_array($results)) {
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $row['nombre']?></td>
+                                                <td><?php echo $row['precio']?></td>
+                                            </tr>
+
+                                            <?php
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </body>
+                            </div>
                         </div>
                     </div>
                 </div>

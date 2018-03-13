@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.faces.bean.ManagedBean;
 import javax.swing.table.DefaultTableModel;
 import org.primefaces.model.DualListModel;
 import pq2.InterfaceProducto;
@@ -23,9 +24,11 @@ import pq3.Producto;
  *
  * @author santiagob20
  */
+@ManagedBean
 public class OperProductos implements InterfaceProducto {
 
     Conexion cn = new Conexion();
+    Producto p = new Producto();
     @Override
     public void insertar(registrarBean p) {
         
@@ -48,21 +51,21 @@ public class OperProductos implements InterfaceProducto {
     }
 
     @Override
-    public List<registrarBean> consultar(registrarBean p) {
-        List<String> lista = new ArrayList<String>();
- 
+    public Producto consultar() {
+        //List<String> lista = new ArrayList<String>();
+        String result="";
         try
         {
             cn.conectarseX();
             PreparedStatement st = cn.conectarseX().prepareStatement("SELECT * FROM producto");
-            lista = new ArrayList();
+            //lista = new ArrayList();
             ResultSet rs = st.executeQuery();
             
             while (rs.next()) 
             {
-                lista.add("pan");
-                lista.add("Jugo");
-                lista.add("Huevos");
+                p.setNombreP(rs.getString("nombre"));
+                p.setPrecio(rs.getInt("precio"));
+                return p;
             }     
         } 
         catch(SQLException ex)
@@ -72,8 +75,8 @@ public class OperProductos implements InterfaceProducto {
         finally
         {
            cn.desconectarse();
-       }
-        return null; //lista;
+        }
+         return null;//lista;
     }
 
     @Override

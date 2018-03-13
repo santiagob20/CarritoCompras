@@ -5,10 +5,13 @@
  */
 package pq3;
 
+import javax.faces.bean.ManagedBean;
+
 /**
  *
  * @author santiagob20
  */
+@ManagedBean
 public class Producto {
     private int id;
     private String nombreP;
