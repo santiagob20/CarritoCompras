@@ -12,45 +12,41 @@
         <link href="css/styleRegistrar.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-        <h:form>
-            <h:body>
-
+        <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">                
+            <div class="container">
                 <div class="container">
-                    <div class="col-md-12">
-                        <div class="BtnSalir">
-                            <img src="Imagenes/salir.png" alt="Boton_Pagar" class="BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>
-                        </div>
-                        <div class="container">
-                            <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
-                            
-                            <h:form>
-                                <div class="contenedor">
-                                    <div class="encabezado_contenedor">
-                                        <h1>Registrar Producto</h1>
-                                    </div>
-                                    <div class="cuerpo_contenedor">
-                                        <div class="Producto">
-                                            <h3>Producto</h3>
-                                            <p:inputText value="#{registrarBean.nombreP}" class="txtNombre"/>
-                                        </div>
-                                        <div class="Precio">
-                                            <h3>Precio</h3>
-                                            <p:inputText value="#{registrarBean.precio}" class="txtPrecio"/>
-                                        </div>
-                                        <div class="BotonRegisttar center-block">
-                                            <p:commandButton type="submit" value="Registrar"  action="#{registrarBean.registrarP()}" class="BTN_ingresar_usuario" />
-                                        </div>
-                                        <div id="Logo">
-                                            <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"/>
-                                        </div>
-                                    </div>
+                    <h:form>
+                        <div class="contenedorBotones">
+                            <div class="BtnSalir">
+                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>
+                            </div>
+                            <div class="encabezado_contenedor">
+                                <h1>Registrar Producto</h1>
+                            </div>
+                            <div class="cuerpo_contenedor">
+                                <div class="Producto">
+                                    <h3>Producto</h3>
+                                    <p:inputText value="#{registrarBean.nombreP}" class="txtNombre"/>
                                 </div>
-                            </h:form>
+                                <div class="Precio">
+                                    <h3>Precio</h3>
+                                    <p:inputText value="#{registrarBean.precio}" class="txtPrecio"/>
+                                </div>
+                                <div class="BotonRegisttar center-block">
+                                    <p:commandButton type="submit" value="Registrar"  action="#{registrarBean.registrarP()}" class="BTN_ingresar_usuario" />
+                                </div>
+                                <div id="Logo">
+                                    <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </h:form>
                 </div>
-            </h:body>
-        </h:form>
+            </div>
+        </div>
+        <div class="col-lg-4"></div> 
     </h:body>
 </html>
 

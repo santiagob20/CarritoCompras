@@ -1,7 +1,7 @@
 .Botones_Principal{
 	height: 189px;
 	width: 796px;
-	margin: 424px 0px 0px 221px;
+	margin: 523px 0px 0px 221px;
 	position: absolute;
 	z-index: 2;
 	display: flex;
@@ -60,9 +60,11 @@ body{
 }
 
 .fondo{
-	position: absolute;
-	margin: 20px 0px 0px 218px;
-	z-index: 1;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-position: center;
 }
 
 .encabezado_contenedor{
@@ -121,11 +123,9 @@ input{
 .container {
     width: 800px;
     height: 600px;
-    margin: 29px 0px 0px 74px;
+    margin: 0px 0px 0px 0px;
 }
 
-.row{
-    width: 800px;
-    height: 600px;
-    margin: 29px 0px 0px 74px;
+.contenedorBotones{
+    margin: 16px 0px 0px -418px;
 }

@@ -6,7 +6,7 @@
 package pq1;
 
 import beans.registrarBean;
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

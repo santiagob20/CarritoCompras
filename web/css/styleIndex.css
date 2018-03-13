@@ -12,33 +12,20 @@ body{
 .fondo{
     position: absolute;
     z-index: 1;
-}
-
-.fondo2{
-    position: absolute;
-    margin: 20px 0px 0px 218px;
-    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-position: center;
 }
 
 .contenedor {
     position: absolute;
     background-color: white;
-    margin: 97px 0px 0px 229px;
+    margin: 28% 6%;
     padding-left: 0px;
     width: 335px;
     height: 435px;
     opacity: 0.9;
     z-index: 2;
-}
-
-.contenedor1{
-    position: absolute;
-    background-color: white;
-    width: 300px;
-    height: 400px;
-    margin: 62px 0px 0px 465px;
-    opacity: 0.9;
-    z-index: 3;
 }
 
 .encabezado_contenedor{
@@ -106,12 +93,7 @@ input{
 .container {
     width: 800px;
     height: 600px;
-    margin: 34px 0px 0px 183px;
-}
-
-.row{
-    height: auto;
-    width: 1615px;
+    margin: 0px 0px 0px 0px;
 }
 
 .txtContrasena{
@@ -121,6 +103,11 @@ input{
 .txtNombre{
     font-size: 12px;
 }
+
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
 
 
 
