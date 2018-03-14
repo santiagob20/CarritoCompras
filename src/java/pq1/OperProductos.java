@@ -51,32 +51,35 @@ public class OperProductos implements InterfaceProducto {
     }
 
     @Override
-    public Producto consultar() {
-        //List<String> lista = new ArrayList<String>();
-        String result="";
+    public List<OperProductos> consultar() {
+        ArrayList<OperProductos> lista = null;
         try
         {
             cn.conectarseX();
             PreparedStatement st = cn.conectarseX().prepareStatement("SELECT * FROM producto");
-            //lista = new ArrayList();
+            lista = new ArrayList();
             ResultSet rs = st.executeQuery();
-            
+            DefaultTableModel dfBuscar = new DefaultTableModel();
+            //JFVerEquipo.jTable.setModel(dfBuscar);
+            dfBuscar.setColumnIdentifiers(new Object[]{"nombre","precio"});
             while (rs.next()) 
             {
-                p.setNombreP(rs.getString("nombre"));
-                p.setPrecio(rs.getInt("precio"));
-                return p;
-            }     
-        } 
-        catch(SQLException ex)
-        {
-            System.out.println(ex);
-        }
+                dfBuscar.addRow(new Object[]{rs.getString("nombre"), rs.getInt("precio")});
+                //lista.add(this)
+            }                    
+       } 
+        catch (SQLException ex) {        
+            Logger.getLogger(OperProductos.class.getName()).log(Level.SEVERE, null, ex);
+        }        
         finally
         {
            cn.desconectarse();
+       }
+        for (int i = 0; i < lista.size(); i++) 
+        {
+            System.out.println(lista.get(i));
         }
-         return null;//lista;
+        return lista;
     }
 
     @Override

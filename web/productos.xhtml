@@ -20,63 +20,25 @@
                     <h:form>  
                         <div class="contenedorBotones">
                             <div class="Btn_salir">
-<<<<<<< HEAD
+
                                 <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>	
                             </div>
-                            <div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
-                                <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="150" height="auto"></img>	
-                                <head>
-                                    <title>Productos de la tienda virtual</title>
-                                </head>
-                                <body>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <td>Nombre</td>
-                                                <td> Precio</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $connect = pg_connect("localhost", "admin", "admin");
-                                            if (!$connect) {
-                                            die(pg_error());
-                                            }
-                                            pg_select_db("compras");
-                                            $results = pg_query("SELECT * FROM producto");
-                                            while($row = pg_fetch_array($results)) {
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $row['nombre']?></td>
-                                                <td><?php echo $row['precio']?></td>
-                                            </tr>
-
-                                            <?php
-                                            }
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </body>
+                            <div class="Logo_Principal">
+                                <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="150" height="auto" action="#{operProductos.consultar()}"></img>	
                             </div>
-=======
-                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location='index.xhtml'"></img>	
+                            <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location = 'index.xhtml'"></img>
+                            <div>
+                                <script type="text/javascript">
+                                </script>    
+                                    
                             </div>
-
->>>>>>> e18f88d740bf37a624f0497049e3cda321da9662
                         </div>
                     </h:form>
-                </div>
-                <div class="col-lg-4"></div>
+                </div>   
             </div>
+            <div class="col-lg-4"></div>
+            
         </section>
     </h:body>
-    <!--<div class="Logo_Principal"> AQUI TENDRIA QUE IR LA TABLA 
-    <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="253" height="auto"></img>	
-    </div>-->
-
-    <!--<p:growl id="msg" showDetail="true" escape="false" />
-    <h3 style="margin-top: 0">Listado de productos</h3>
-    <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />
-    <p:commandButton id="citySubmit" value="Submit" update="displayCities" oncomplete="PF('cityDialog').show()" style="margin-top:5px" />-->
 </html>
 

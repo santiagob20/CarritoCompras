@@ -7,7 +7,7 @@ package pq2;
 
 import beans.registrarBean;
 import java.util.List;
-import pq3.Producto;
+import pq1.OperProductos;
 
 
 /**
@@ -16,7 +16,7 @@ import pq3.Producto;
  */
 public interface InterfaceProducto {
     public void insertar(registrarBean p);
-    public Producto consultar();
+    public List<OperProductos> consultar();
     public void editar(registrarBean p);
     public void eliminar(registrarBean p);
 }
