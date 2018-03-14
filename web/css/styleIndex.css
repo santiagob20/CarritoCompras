@@ -1,0 +1,113 @@
+body{
+    font-family: 'Allerta', sans-serif;
+    background-color: black;
+}
+
+.portada{
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.fondo{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+.contenedor {
+    position: absolute;
+    background-color: white;
+    margin: 28% 6%;
+    padding-left: 0px;
+    width: 335px;
+    height: 435px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.encabezado_contenedor{
+    height: 100px;
+    border-bottom: solid;
+    background-color: rgb(0, 0, 51); 
+}
+
+.encabezado_contenedor h1{
+    color: white;
+    padding: 36px 0px 0px 76px;
+    font-size: 32px;
+    margin: 0px;
+}
+
+.cuerpo_contenedor{
+    height: max-content;
+}
+
+.nomre{
+    font-size: 17px;
+    display: -webkit-box;
+    margin: 45px 0px 16px 10px;
+}
+
+.contenedor h3{
+    margin: 0px 16px 25px 25px;
+}
+
+.nomre h3{
+    margin: 0px 46px 7px 25px;
+}
+
+.Producto h3{
+
+}
+
+.Contraseña{
+    font-size: 17px;
+    display: -webkit-box;
+    margin: 0px 0px 16px 0px;
+}
+
+input{
+    width: 126px;
+    height: 23px;
+}
+
+.BTN_ingresar_usuario{
+    font-style: oblique;
+    padding: 9px 0px 10px 0px;
+    border-radius: 8px;
+}
+
+.logo_carro{
+    margin: 15px 0px 0px 120px
+}
+
+.Producto{
+    font-size: 17px;
+    display: -webkit-box;
+    margin: 0px 0px 16px 0px;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    margin: 0px 0px 0px 0px;
+}
+
+.txtContrasena{
+    font-size: 12px;
+}
+
+.txtNombre{
+    font-size: 12px;
+}
+
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
+
+
+

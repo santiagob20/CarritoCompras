@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Página Principal</title>
+	<h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+	<h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:outputStylesheet library="css" name="style.css"  />
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/stylePrincipal.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+        <section class="portada">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="container">
+                    <h:form>  
+                        <div class="contenedorBotones">
+                            <div class="Btn_salir">
+                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton" width="90" height="auto" onclick="location='index.xhtml'"></img>	
+                            </div>
+                            <div class="Logo_Principal">
+                                <img src="Imagenes/logo_carro.png" alt="Boton_Pagar" class="boton" width="253" height="auto"></img>	
+                            </div>
+                            <div class="Botones_Principal">
+                                <div class="Btn_Pagar">
+                                    <img src="Imagenes/pagar.png" alt="Boton_Pagar" class="boton" width="65px" height="auto" value="#{operProductos.consultar()}" onclick="location='productos.xhtml'"></img>	
+                                </div>
+                                <div class="Btn_VerProductos">
+                                    <img src="Imagenes/verProductos.png" alt="Btn_VerProductos" class="boton" width="100" height="auto" onclick= "location='registrar.xhtml' "></img>	
+                                </div>
+                                <div class="Btn_VerCarrito">
+                                    <img src="Imagenes/veCarrito.png" alt="Btn_VerCarrito" class="boton" width="100" height="100"></img>	
+                                </div>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </section>
+    </h:body>
+</html>
+

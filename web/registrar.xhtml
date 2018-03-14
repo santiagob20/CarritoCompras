@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Registrar Productos</title>
+        <h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+        <h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:outputStylesheet library="css" name="style.css"  />
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styleRegistrar.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">                
+            <div class="container">
+                <div class="container">
+                    <h:form>
+                        <div class="contenedorBotones">
+                            <div class="BtnSalir">
+                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>
+                            </div>
+                            <div class="encabezado_contenedor">
+                                <h1>Registrar Producto</h1>
+                            </div>
+                            <div class="cuerpo_contenedor">
+                                <div class="Producto">
+                                    <h3>Producto</h3>
+                                    <p:inputText value="#{registrarBean.nombreP}" class="txtNombre"/>
+                                </div>
+                                <div class="Precio">
+                                    <h3>Precio</h3>
+                                    <p:inputText value="#{registrarBean.precio}" class="txtPrecio"/>
+                                </div>
+                                <div class="BotonRegisttar center-block">
+                                    <p:commandButton type="submit" value="Registrar"  action="#{registrarBean.registrarP()}" class="BTN_ingresar_usuario" />
+                                </div>
+                                <div id="Logo">
+                                    <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"/>
+                                </div>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div> 
+    </h:body>
+</html>
+
