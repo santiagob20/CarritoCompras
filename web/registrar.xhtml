@@ -12,41 +12,67 @@
         <link href="css/styleRegistrar.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-        <img src="Imagenes/menu_ppal.jpg" width="800" height="600" alt="fondo" class="img-rounded fondo"></img>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">                
-            <div class="container">
-                <div class="container">
-                    <h:form>
-                        <div class="contenedorBotones">
-                            <div class="BtnSalir">
-                                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton BtnSalir" width="90" height="auto" onclick="location='Principal.xhtml'"></img>  
+            </div>
+            <div class="col-lg-8 caja">
+                <h:form class="form-group">
+                    <div class="row encabezado">
+                        <h1><b>Registrar Producto</b></h1> 
+                    </div> 
+                    <div class="form-row">
+                        <div class="row">
+                            <div class="col-lg-6">
+                            <h3><b>Nombre del Producto</b></h3>
+                            <p:inputText value="#{indexBean.user}" class="form-control" placeholder="Ingrese el Producto"/>
                             </div>
-                            <div class="encabezado_contenedor">
-                                <h1>Registrar Producto</h1>
-                            </div>
-                            <div class="cuerpo_contenedor">
-                                <div class="Producto">
-                                    <h3>Producto</h3>
-                                    <p:inputText value="#{registrarBean.nombreP}" class="txtNombre"/>
-                                </div>
-                                <div class="Precio">
-                                    <h3>Precio</h3>
-                                    <p:inputText value="#{registrarBean.precio}" class="txtPrecio"/>
-                                </div>
-                                <div class="BotonRegisttar center-block">
-                                    <p:commandButton type="submit" value="Registrar"  action="#{registrarBean.registrarP()}" class="BTN_ingresar_usuario" />
-                                </div>
-                                <div id="Logo">
-                                    <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="logo_carro"/>
-                                </div>
+                            <div class="col-lg-6">
+                            <h3><b>Cantidad</b></h3>
+                            <p:inputText value="#{indexBean.user}" class="form-control" placeholder="Ingrese la Cantidad"/>
                             </div>
                         </div>
-                    </h:form>
-                </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                            <h3><b>Precio</b></h3>
+                            <p:inputText value="#{indexBean.password}" class="center-block form-control" placeholder="Ingrese el Precio"/>
+                            </div>
+                            <div class="col-lg-6">
+                                <h3><b>Tipo de Producto</b></h3>
+                                <select name="OS" class="form-control">
+                                    <option value="1">Alimentos</option> 
+                                    <option value="2">Bebidas</option> 
+                                    <option value="3">Tecnologia</option>
+                                    <option value="10">Hogar</option> 
+                                    <option value="11">Aseo Personaljajaj</option> 
+                                    <option value="12">Herramientas</option> 
+                                    <option value="12">Otros</option> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3><b>xxxxxxxxxxxxx</b></h3>
+                                <p:inputText value="#{indexBean.user}" class="form-control" placeholder="xxxxxxxxxxxx"/>
+                            </div>
+                            <div class="col-lg-6">
+                                <h3><b>xxxxxxxxxxxx</b></h3>
+                                <p:inputText value="#{indexBean.user}" class="form-control" placeholder="xxxxxxxxxxxxxxx"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p:commandButton value="Registrar Producto" action="#{registrarBean.registrarP()}" class="center-block btn btn-primary" />
+                        </div>
+                        <div class="row imagenes">
+                            <img src="Imagenes/clipboard.png" width="95" height="75" alt="logo_clipboard" class="center-block logo_carro"></img>
+                            <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" class="center-block logo_carro"></img>
+                            <img src="Imagenes/bodega.png" width="95" height="75" alt="logo_bodega" class="center-block logo_carro"></img>
+                        </div>
+                    </div>
+                </h:form>
             </div>
+            <div class="col-lg-2"></div>
         </div>
-        <div class="col-lg-4"></div> 
     </h:body>
 </html>
 

@@ -12,35 +12,31 @@
         <link href="css/styleIndex.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
-        <img src="Imagenes/FondoPrincipal.jpg" width="800" height="600" alt="fondo" class="fondo"></img>
         <div class="row">
             <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <div class="container">
-                    <h:form>
-                        <div class="contenedor">
-                            <div class="encabezado_contenedor">
-                                <h1>Iniciar sesión</h1> 
-                            </div> 
-                            <div class="cuerpo_contenedor">
-                                <div class="Usuario nomre">
-                                    <h3>Nombre</h3>
-                                    <p:inputText value="#{indexBean.user}" class="txtNombre" placeholder="ingrese su usuario"/>
-                                </div>
-                                <div class="Contraseña">
-                                    <h3>Contraseña</h3>
-                                    <p:inputText type="password" value="#{indexBean.password}" class="txtContrasena" placeholder="ingrese contraseña"/>
-                                </div>
-                                <div id="Boton_Ingreso">
-                                    <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="BTN_ingresar_usuario center-block" />
-                                </div>
-                                <div id="Logo">
-                                    <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" id="logo_carro" class="img-rounded logo_carro"></img>
-                                </div>
-                            </div>
+            <div class="col-lg-4 caja">
+                <h:form class="form-group">
+                    <div class="row encabezado">
+                        <h1><b>Iniciar sesión</b></h1> 
+                    </div> 
+                    <div class="form-row">
+                        <div class="row">
+                            <h3><b>Nombre</b></h3>
+                            <p:inputText value="#{indexBean.user}" class="form-control" placeholder="ingrese su usuario"/>
+                             <small id="emailHelp" class="form-text text-muted">Solo usuarios registrados</small> 
                         </div>
-                    </h:form>
-                </div>
+                        <div class="row">
+                            <h3><b>Contraseña</b></h3>
+                            <p:inputText type="password" value="#{indexBean.password}" class="center-block form-control" placeholder="ingrese contraseña"/>
+                        </div>
+                        <div class="row">
+                            <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="center-block btn btn-primary" />
+                        </div>
+                        <div class="row">
+                            <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" class="center-block logo_carro"></img>
+                        </div>
+                    </div>
+                </h:form>
             </div>
             <div class="col-lg-4"></div>
         </div>
