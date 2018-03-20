@@ -30,24 +30,26 @@ public class OperProductos implements InterfaceProducto {
     Conexion cn = new Conexion();
     Producto p = new Producto();
     @Override
-    public void insertar(registrarBean p) {
-        
+    public boolean insertar(registrarBean p) {
+        boolean result=true;
         if(cn!=null){
             
         try
         {
+            
             cn.conectarseX();
             System.out.println("conectado!");
             PreparedStatement st = cn.conectarseX().prepareStatement("INSERT INTO producto(nombre,precio) VALUES(?,?)");
             st.setString(1,p.getNombreP());
             st.setInt(2,p.getPrecio());
             st.executeUpdate();
-            
+            result=true;
         } catch (SQLException ex) {
             Logger.getLogger(OperUser.class.getName()).log(Level.SEVERE, null, ex);
+            result=false;
         }
         }
-     
+     return result;
     }
 
     @Override

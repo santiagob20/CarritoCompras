@@ -16,6 +16,25 @@ public class Producto {
     private int id;
     private String nombreP;
     private int precio;
+    int cantidad;
+    String tipoProducto;
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getTipoProducto() {
+        return tipoProducto;
+    }
+
+    public void setTipoProducto(String tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
+    
     
 
     /**

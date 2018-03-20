@@ -15,7 +15,7 @@ import pq1.OperProductos;
  * @author santiagob20
  */
 public interface InterfaceProducto {
-    public void insertar(registrarBean p);
+    public boolean insertar(registrarBean p);
     public List<OperProductos> consultar();
     public void editar(registrarBean p);
     public void eliminar(registrarBean p);

@@ -45,6 +45,9 @@ public class indexBean {
         if(op.consultar(indexBean.this))
         {
          result= "login";
+        }else
+        {
+            result="errorLogin";
         }
         return result; 
     }
