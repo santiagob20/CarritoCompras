@@ -8,6 +8,7 @@ package pq2;
 import beans.registrarBean;
 import java.util.List;
 import pq1.OperProductos;
+import pq3.Producto;
 
 
 /**
@@ -15,8 +16,8 @@ import pq1.OperProductos;
  * @author santiagob20
  */
 public interface InterfaceProducto {
-    public boolean insertar(registrarBean p);
-    public List<OperProductos> consultar();
+    public boolean insertar(Producto p);
+    public List<Producto> consultar();
     public void editar(registrarBean p);
     public void eliminar(registrarBean p);
 }

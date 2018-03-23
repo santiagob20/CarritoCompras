@@ -5,7 +5,9 @@
  */
 package pq3;
 
+import java.util.List;
 import javax.faces.bean.ManagedBean;
+import pq1.OperProductos;
 
 /**
  *
@@ -13,7 +15,6 @@ import javax.faces.bean.ManagedBean;
  */
 @ManagedBean
 public class Producto {
-    private int id;
     private String nombreP;
     private int precio;
     int cantidad;
@@ -35,21 +36,6 @@ public class Producto {
         this.tipoProducto = tipoProducto;
     }
     
-    
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
 
     /**
      * @return the nombreP
@@ -79,4 +65,25 @@ public class Producto {
         this.precio = precio;
     }
     
+    public String registrarP(){
+        OperProductos op = new OperProductos();
+        boolean result=false; 
+        result= op.insertar(this);
+        
+        if(result)
+        {
+            return "insertado";    
+        }else
+        {
+            return "no insertado";
+        }
+    }
+    
+    
+    
+    public List<Producto> mostrarProductos()
+    {
+        OperProductos oper = new OperProductos();
+        return oper.consultar();
+    }
 }

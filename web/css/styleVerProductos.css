@@ -7,7 +7,7 @@ body
     background-size: cover; 
 }
 
-.row{
+.row1{
     margin: 0px 0px 0px 0px;
 }
 
@@ -20,6 +20,12 @@ body
 }
 
 .BtnSalir{
-    margin: 8% 0% 0% -5%;
+    margin: 8% 0% 0% 3%;
     position: absolute;
+}
+
+.caja{
+    background-color: whitesmoke;
+    margin-top: 20%;
+    
 }

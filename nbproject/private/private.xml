@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/registrar.xhtml</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq1/OperProductos.java</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/Principal.xhtml</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq1/OperUser.java</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/css/stylePrincipal.css</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/css/styleRegistrar.css</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq2/InterfaceProducto.java</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq3/Producto.java</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/productos.xhtml</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/web/index.xhtml</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/beans/registrarBean.java</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/beans/indexBean.java</file>
-            <file>file:/Users/santiagob20/NetBeansProjects/ProyCompras/src/java/pq1/Conexion.java</file>
-        </group>
-    </open-files>
 </project-private>

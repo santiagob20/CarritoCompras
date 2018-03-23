@@ -30,7 +30,7 @@ public class OperProductos implements InterfaceProducto {
     Conexion cn = new Conexion();
     Producto p = new Producto();
     @Override
-    public boolean insertar(registrarBean p) {
+    public boolean insertar(Producto p) {
         boolean result=true;
         if(cn!=null){
             
@@ -39,9 +39,11 @@ public class OperProductos implements InterfaceProducto {
             
             cn.conectarseX();
             System.out.println("conectado!");
-            PreparedStatement st = cn.conectarseX().prepareStatement("INSERT INTO producto(nombre,precio) VALUES(?,?)");
+            PreparedStatement st = cn.conectarseX().prepareStatement("INSERT INTO producto VALUES(?,?,?,?)");
             st.setString(1,p.getNombreP());
             st.setInt(2,p.getPrecio());
+            st.setInt(3, p.getCantidad());
+            st.setString(4, p.getTipoProducto());
             st.executeUpdate();
             result=true;
         } catch (SQLException ex) {
@@ -53,33 +55,24 @@ public class OperProductos implements InterfaceProducto {
     }
 
     @Override
-    public List<OperProductos> consultar() {
-        ArrayList<OperProductos> lista = null;
-        try
-        {
+    public List<Producto> consultar() {
+        ArrayList<Producto> lista = new ArrayList();
+        try {
             cn.conectarseX();
             PreparedStatement st = cn.conectarseX().prepareStatement("SELECT * FROM producto");
-            lista = new ArrayList();
             ResultSet rs = st.executeQuery();
-            DefaultTableModel dfBuscar = new DefaultTableModel();
-            //JFVerEquipo.jTable.setModel(dfBuscar);
-            dfBuscar.setColumnIdentifiers(new Object[]{"nombre","precio"});
-            while (rs.next()) 
-            {
-                dfBuscar.addRow(new Object[]{rs.getString("nombre"), rs.getInt("precio")});
-                //lista.add(this)
-            }                    
-       } 
-        catch (SQLException ex) {        
+            while (rs.next()) {
+                Producto p = new Producto();
+                p.setNombreP(rs.getString("nombre"));
+                p.setPrecio(rs.getInt("precio"));
+                p.setCantidad(rs.getInt("cantidad"));
+                p.setTipoProducto(rs.getString("tipoProducto"));
+                lista.add(p);
+            }
+        } catch (SQLException ex) {
             Logger.getLogger(OperProductos.class.getName()).log(Level.SEVERE, null, ex);
-        }        
-        finally
-        {
-           cn.desconectarse();
-       }
-        for (int i = 0; i < lista.size(); i++) 
-        {
-            System.out.println(lista.get(i));
+        } finally {
+            cn.desconectarse();
         }
         return lista;
     }

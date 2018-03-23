@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
     <h:head>
         <title>Registrar Productos</title>
         <h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
@@ -11,7 +11,6 @@
         <h:outputStylesheet library="css" name="style.css"  />
         <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/styleRegistrar.css" rel="stylesheet" type="text/css"/>
-        <p:link href="style.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
         <div class="row">
@@ -28,53 +27,35 @@
                         <div class="row">
                             <div class="col-lg-6">
                             <h3><b>Nombre del Producto</b></h3>
-                            <p:inputText label="nombre" id="nombre" value="#{registrarBean.nombreP}" class="form-control" placeholder="Ingrese el Producto"/>
+                            <b:inputText value="#{producto.nombreP}" class="form-control" placeholder="Ingrese el Producto"/>
                             </div>
                             <div class="col-lg-6">
                             <h3><b>Cantidad</b></h3>
-                            <p:inputText value="#{registrarBean.cantidad}" class="form-control" placeholder="Ingrese la Cantidad"/>
+                            <b:inputText value="#{producto.cantidad}" class="form-control" placeholder="Ingrese la Cantidad"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
                             <h3><b>Precio</b></h3>
-                            <p:inputText value="#{registrarBean.precio}" class="center-block form-control" placeholder="Ingrese el Precio"/>
+                            <b:inputText value="#{producto.precio}" class="center-block form-control" placeholder="Ingrese el Precio"/>
                             </div>
                             <div class="col-lg-6">
                                 <h3><b>Tipo de Producto</b></h3>
-                                <select name="OS" class="form-control">
-                                    <option value="#{registrarBean.tipoProducto}">Alimentos</option> 
-                                    <option value="#{registrarBean.tipoProducto}">Bebidas</option> 
-                                    <option value="#{registrarBean.tipoProducto}">Tecnologia</option>
-                                    <option value="#{registrarBean.tipoProducto}">Hogar</option> 
-                                    <option value="#{registrarBean.tipoProducto}">Aseo Personaljajaj</option> 
-                                    <option value="#{registrarBean.tipoProducto}">Herramientas</option> 
-                                    <option value="#{registrarBean.tipoProducto}">Otros</option> 
-                                </select>
+                                <h:selectOneMenu value="#{producto.tipoProducto}" class="form-control">
+                                    <f:selectItem itemValue="Alimentos" itemLabel="Alimentos"/>
+                                    <f:selectItem itemValue="Bebidas" itemLabel="Bebidas"/>
+                                    <f:selectItem itemValue="Tecnología" itemLabel="tecnología"/>
+                                    <f:selectItem itemValue="Hogar" itemLabel="Hogar"/>
+                                    <f:selectItem itemValue="Aseo Personal" itemLabel="Aseo Personal"/>
+                                    <f:selectItem itemValue="Herramientas" itemLabel="Herramientas"/>
+                                    <f:selectItem itemValue="Otros" itemLabel="Otros"/>
+                                </h:selectOneMenu>
                             </div>
                         </div>
+                        
                         <div class="row">
-                            <div class="col-lg-6">
-                                <h3><b>xxxxxxxxxxxxx</b></h3>
-                                <p:inputText value="#{registrarBean.tipoProducto}" class="form-control" placeholder="xxxxxxxxxxxx"/>
-                            </div>
-                            <div class="col-lg-6">
-                                <h3><b>xxxxxxxxxxxx</b></h3>
-                                <p:inputText value="#{registrarBean.tipoProducto}" class="form-control" placeholder="xxxxxxxxxxxxxxx"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p:commandButton  value="Registrar Producto" action="#{registrarBean.registrarP()}" class="center-block btn btn-primary" validateClient="true"/>
-                            <script>
-                                if(#{registrarBean.insert=="no insertado"})
-                                {
-                                    alert('Error, verifique que todos los campos esten correctamente diligenciados')
-                                }
-                                else
-                                {
-                                    alert('producto registrado correctamente')
-                                }
-                            </script>
+                            <b:commandButton id="resgistrar" value="Registrar Producto" action="#{producto.registrarP()}" class="center-block btn btn-primary"/>
+
                         </div>
                         <div class="row imagenes">
                             <img src="Imagenes/clipboard.png" width="85" height="80" alt="logo_clipboard" class="center-block logo_carro"></img>
