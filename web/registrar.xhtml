@@ -15,29 +15,29 @@
     <h:body>
         <div class="row">
             <div class="col-lg-2">
-                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton BtnSalir" width="90" height="auto" onclick="location='Principal.xhtml'"></img>  
+                <img src="Imagenes/salir.png" alt="Boton_Pagar" class="boton BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>  
             </div>
             <div class="col-lg-8 caja">
-              
+
                 <h:form class="form-group">
                     <div class="row encabezado">
                         <h1><b>Registrar Producto</b></h1> 
-                    </div> 
+                    </div>
                     <div class="form-row">
                         <div class="row">
                             <div class="col-lg-6">
-                            <h3><b>Nombre del Producto</b></h3>
-                            <b:inputText value="#{producto.nombreP}" class="form-control" placeholder="Ingrese el Producto"/>
+                                <h3><b>Nombre del Producto</b></h3>
+                                <b:inputText value="#{producto.nombreP}" class="form-control" placeholder="Ingrese el Producto" />
                             </div>
                             <div class="col-lg-6">
-                            <h3><b>Cantidad</b></h3>
-                            <b:inputText value="#{producto.cantidad}" class="form-control" placeholder="Ingrese la Cantidad"/>
+                                <h3><b>Cantidad</b></h3>
+                                <b:inputText value="#{producto.cantidad}" class="form-control" placeholder="Solo numeros" onkeypress="return justNumbers(event);"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
-                            <h3><b>Precio</b></h3>
-                            <b:inputText value="#{producto.precio}" class="center-block form-control" placeholder="Ingrese el Precio"/>
+                                <h3><b>Precio</b></h3>
+                                <b:inputText value="#{producto.precio}" class="center-block form-control" placeholder="Solo numeros" onkeypress="return justNumbers(event);"/>
                             </div>
                             <div class="col-lg-6">
                                 <h3><b>Tipo de Producto</b></h3>
@@ -52,9 +52,19 @@
                                 </h:selectOneMenu>
                             </div>
                         </div>
-                        
                         <div class="row">
-                            <b:commandButton id="resgistrar" value="Registrar Producto" action="#{producto.registrarP()}" class="center-block btn btn-primary"/>
+                            <div class="col-lg-6">
+                                <h3><b>Marca</b></h3>
+                                <b:inputText value="#{producto.marca}" class="form-control" placeholder="Digite la marca"/>
+                            </div>
+                            <div class="col-lg-6">
+                                <h3><b>Descripcion</b></h3>
+                                <b:inputText value="#{producto.descripcion}" class="form-control" placeholder="Descripcion del producto"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <b:commandButton id="registrar" value="Registrar Producto" action="#{producto.registrarP()}" class="center-block btn btn-primary" />
 
                         </div>
                         <div class="row imagenes">
@@ -63,6 +73,27 @@
                             <img src="Imagenes/bodega.png" width="80" height="75" alt="logo_bodega" class="center-block logo_carro"></img>
                         </div>
                     </div>
+                    <script type="text/javascript">
+                        function justNumbers(e)
+                        {
+                            var keynum = window.event ? window.event.keyCode : e.which;
+                            if ((keynum == 8) || (keynum == 46))
+                                return true;
+
+                            return /\d/.test(String.fromCharCode(keynum));
+                        }
+                        function validar()
+                        {
+                            var resultado = document.getElementById("registrar");
+                            if (resultado = "no insertado")
+                            {
+                                alert("Error al insertar")
+                            } else
+                            {
+                                alert("Insertado correctamente")
+                            }
+                        }
+                    </script>
                 </h:form>
             </div>
             <div class="col-lg-2"></div>

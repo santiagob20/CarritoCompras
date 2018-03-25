@@ -27,12 +27,18 @@
                                 <th>Precio</th>
                                 <th>Cantidad</th>
                                 <th>Tipo de Producto</th>
+                                <th>Marca</th>
+                                <th>Descripcion</th>
+                                <th>Seleccione</th>
                             </tr>
                         </f:facet>
                         <b:dataTableColumn value="#{tab.nombreP}"/>
                         <b:dataTableColumn value="#{tab.precio}"/>
                         <b:dataTableColumn value="#{tab.cantidad}"/>
                         <b:dataTableColumn value="#{tab.tipoProducto}"/>
+                        <b:dataTableColumn value="#{tab.marca}"/>
+                        <b:dataTableColumn value="#{tab.descripcion}"/>
+                        <h:commandButton value="Comprar" action="#{carrito.guardarCarrito(producto.mostrarProductos())}" onclick="location='pagar.xhtml'" class="boton"/>
                     </b:dataTable>
                 </h:form>
                 <div class="col-lg-2"></div>

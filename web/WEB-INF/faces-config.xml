@@ -29,5 +29,12 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
-    
+    <navigation-rule>
+        <from-view-id>/VerProductos.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>guardado</from-outcome>
+            <to-view-id>/pagar.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>

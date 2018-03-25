@@ -39,11 +39,13 @@ public class OperProductos implements InterfaceProducto {
             
             cn.conectarseX();
             System.out.println("conectado!");
-            PreparedStatement st = cn.conectarseX().prepareStatement("INSERT INTO producto VALUES(?,?,?,?)");
+            PreparedStatement st = cn.conectarseX().prepareStatement("INSERT INTO producto VALUES(?,?,?,?,?,?)");
             st.setString(1,p.getNombreP());
             st.setInt(2,p.getPrecio());
             st.setInt(3, p.getCantidad());
             st.setString(4, p.getTipoProducto());
+            st.setString(5,p.getMarca());
+            st.setString(6, p.getDescripcion());
             st.executeUpdate();
             result=true;
         } catch (SQLException ex) {
@@ -67,6 +69,8 @@ public class OperProductos implements InterfaceProducto {
                 p.setPrecio(rs.getInt("precio"));
                 p.setCantidad(rs.getInt("cantidad"));
                 p.setTipoProducto(rs.getString("tipoProducto"));
+                p.setMarca(rs.getString("marca"));
+                p.setDescripcion(rs.getString("descripcion"));
                 lista.add(p);
             }
         } catch (SQLException ex) {

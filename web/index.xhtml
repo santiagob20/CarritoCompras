@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:b="http://bootsfaces.net/ui">
 
     <h:head>
         <title>Carrito de Compras</title>
@@ -22,15 +22,15 @@
                     <div class="form-row">
                         <div class="row">
                             <h3><b>Nombre</b></h3>
-                            <p:inputText value="#{indexBean.user}" class="form-control" placeholder="ingrese su usuario"/>
+                            <b:inputText value="#{indexBean.user}" class="form-control" placeholder="ingrese su usuario"/>
                              <small id="emailHelp" class="form-text text-muted">Solo usuarios registrados</small> 
                         </div>
                         <div class="row">
                             <h3><b>Contraseña</b></h3>
-                            <p:inputText type="password" value="#{indexBean.password}" class="center-block form-control" placeholder="ingrese contraseña"/>
+                            <b:inputText type="password" value="#{indexBean.password}" class="center-block form-control" placeholder="ingrese contraseña"/>
                         </div>
                         <div class="row">
-                            <p:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" onmouseup="if(#{indexBean.validarLogin()=='errorLogin'})alert('Usuario o contraseña incorrectos')" class="center-block btn btn-primary" />
+                            <b:commandButton value="Ingresar" action="#{indexBean.validarLogin()}" class="center-block btn btn-primary" />
                         </div>
                         <div class="row">
                             <img src="Imagenes/logo_carro.png" width="95" height="75" alt="logo_carro" class="center-block logo_carro"></img>

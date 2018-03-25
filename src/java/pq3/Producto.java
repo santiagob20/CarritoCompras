@@ -17,8 +17,26 @@ import pq1.OperProductos;
 public class Producto {
     private String nombreP;
     private int precio;
-    int cantidad;
-    String tipoProducto;
+    private int cantidad;
+    private String tipoProducto;
+    private String marca;
+    private String descripcion;
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
     public int getCantidad() {
         return cantidad;
@@ -68,8 +86,9 @@ public class Producto {
     public String registrarP(){
         OperProductos op = new OperProductos();
         boolean result=false; 
-        result= op.insertar(this);
-        
+        if(nombreP!=""||precio!=0||cantidad!=0||marca!=""||descripcion!=""){
+            result= op.insertar(this);
+        }
         if(result)
         {
             return "insertado";    
@@ -86,4 +105,7 @@ public class Producto {
         OperProductos oper = new OperProductos();
         return oper.consultar();
     }
+
+    
+    
 }
