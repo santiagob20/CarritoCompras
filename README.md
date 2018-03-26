@@ -35,9 +35,23 @@ TABLESPACE pg_default;
 ALTER TABLE public.usuario
     OWNER to admin;
 
+
 #crear usuario y contraseña por default a su preferencia. Ejemplo:
 INSERT INTO public.usuario(
 	"user", password)
 	VALUES ('admin', 'admin');
 
 
+#crear tabla producto
+CREATE TABLE public.producto
+(
+    nombre text NOT NULL,
+    precio integer NOT NULL
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.producto
+    OWNER to admin;

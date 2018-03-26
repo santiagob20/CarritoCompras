@@ -40,13 +40,14 @@ public class indexBean {
     }
     
     public String validarLogin()
-    {
-        
-        
+    {        
         String result="";
         if(op.consultar(indexBean.this))
         {
          result= "login";
+        }else
+        {
+            result="errorLogin";
         }
         return result; 
     }

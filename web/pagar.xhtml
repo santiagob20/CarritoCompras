@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>pagar</title>
+        <h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+        <h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:outputStylesheet library="css" name="style.css"  />
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styleRegistrar.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="Imagenes/salir.png" alt="Boton_Salir" class="boton BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>  
+            </div>
+            <div class="col-lg-8 caja">
+                <h:form class="form-group caja">
+
+                    <b:dataTable value="#{carrito.verCarrito()}" var="car" lang="es">
+                        <f:facet name="header">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Tipo de Producto</th>
+                            </tr>
+                        </f:facet>
+                        <b:dataTableColumn value="#{car.nombreP}"/>
+                        <b:dataTableColumn value="#{car.precio}"/>
+                        <b:dataTableColumn value="#{car.cantidad}"/>
+                        <b:dataTableColumn value="#{car.tipoProducto}"/>
+                    </b:dataTable>
+                    <div class="row">
+                        <b:commandButton id="registrar" value="Pagar" onclick="alert('En mantenimiento, intente más tarde')" class="center-block btn btn-primary" />
+
+                    </div>
+                </h:form>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

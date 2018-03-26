@@ -5,16 +5,19 @@
  */
 package pq2;
 
+import beans.registrarBean;
 import java.util.List;
+import pq1.OperProductos;
 import pq3.Producto;
+
 
 /**
  *
  * @author santiagob20
  */
 public interface InterfaceProducto {
-    public void insertar(Producto p);
-    public List<Producto> consultar(Producto p);
-    public void editar(Producto p);
-    public void eliminar(Producto p);
+    public boolean insertar(Producto p);
+    public List<Producto> consultar();
+    public void editar(registrarBean p);
+    public void eliminar(registrarBean p);
 }

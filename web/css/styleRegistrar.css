@@ -1,0 +1,57 @@
+body
+{
+    font-family: 'Allerta', sans-serif;
+    background: url("../Imagenes/menu_ppal.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
+.BtnSalir{
+    margin: 8% 0% 0% 0%;
+    position: absolute;
+}
+
+.boton {
+    cursor: pointer;
+}
+
+.boton:hover {
+    opacity: 0.3;
+}
+
+.encabezado{
+    color: white;
+    background-color: #122b40;
+    margin: 0px -15px 5px -15px;
+}
+
+.caja{
+    z-index: 5;
+    background-color: white;
+    margin-top: 4%;
+}
+
+h1{
+    text-align: center;
+}
+
+.logo_carro, .btn-primary{
+    margin-top: 30px;
+}
+
+.btn-primary:hover{
+    background-color: #eb9316;
+    border-bottom-color: #eb9316;
+}
+
+.imagenes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    
+}

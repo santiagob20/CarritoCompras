@@ -5,29 +5,55 @@
  */
 package pq3;
 
+import java.util.List;
+import javax.faces.bean.ManagedBean;
+import pq1.OperProductos;
+
 /**
  *
  * @author santiagob20
  */
+@ManagedBean
 public class Producto {
-    private int id;
     private String nombreP;
     private int precio;
+    private int cantidad;
+    private String tipoProducto;
+    private String marca;
+    private String descripcion;
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getTipoProducto() {
+        return tipoProducto;
+    }
+
+    public void setTipoProducto(String tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
     
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
 
     /**
      * @return the nombreP
@@ -56,5 +82,30 @@ public class Producto {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
+    
+    public String registrarP(){
+        OperProductos op = new OperProductos();
+        boolean result=false; 
+        if(nombreP!=""||precio!=0||cantidad!=0||marca!=""||descripcion!=""){
+            result= op.insertar(this);
+        }
+        if(result)
+        {
+            return "insertado";    
+        }else
+        {
+            return "no insertado";
+        }
+    }
+    
+    
+    
+    public List<Producto> mostrarProductos()
+    {
+        OperProductos oper = new OperProductos();
+        return oper.consultar();
+    }
+
+    
     
 }

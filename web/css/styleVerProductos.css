@@ -1,0 +1,31 @@
+body
+{
+    font-family: 'Allerta', sans-serif;
+    background: url("../Imagenes/menu_ppal.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.row1{
+    margin: 0px 0px 0px 0px;
+}
+
+.boton{
+    cursor: pointer;
+}
+
+.boton:hover{
+    opacity: 0.3;
+}
+
+.BtnSalir{
+    margin: 8% 0% 0% 3%;
+    position: absolute;
+}
+
+.caja{
+    background-color: whitesmoke;
+    margin-top: 20%;
+    
+}

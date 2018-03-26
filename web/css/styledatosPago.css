@@ -1,0 +1,114 @@
+body
+{
+    font-family: 'Allerta', sans-serif;
+    background: url("../Imagenes/menu_ppal.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
+.boton{
+    cursor: pointer;
+}
+
+.boton:hover{
+    opacity: 0.3;
+}
+
+.Logo{
+    margin: 22% 0% 0% 33%;
+    position: absolute;
+}
+
+.BtnSalir{
+    margin: 8% 0% 0% 2%;
+    position: absolute;
+}
+
+.Botones_Principal{
+    display: flex;
+    justify-content: space-around;
+    margin: 63% 0px 0px 42%;
+    align-items: center;    
+    position: absolute;
+}
+
+.TitulosBotones{
+    display: flex;
+    justify-content: space-around;
+    margin: 51% 0px 0px 30%;
+    align-items: center;    
+    position: absolute;
+}
+
+.TitulosBotones h2{
+    margin-right: 31%;
+    text-align: center;
+}
+
+.textoBotones{
+    position: absolute;
+    margin: 0% 0% 0% 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    position: absolute;
+}
+
+.Botones_Principal .boton{
+    margin-right: 62%;
+}
+
+.caja{
+    z-index: 5;
+    background-color: white;
+    margin-top: 4%;
+}
+
+.encabezado{
+    color: white;
+    background-color: #122b40;
+    margin: 0px -15px 5px -15px;
+}
+
+h1{
+    text-align: center;
+}
+
+.logo_Mastercard{
+    
+}
+
+.logo_Visa{
+    
+}
+
+.logo_carro{
+    margin-top: 20%;
+}
+
+.botonValidar{
+    background-color: whitesmoke;
+}
+
+.botonValidar:hover{
+    background-color: black;
+    color: white;
+}
+
+.botonPagar{
+    margin-top: 5%;
+    width: 241px;
+    height: 48px;
+}
+
+.botonPagar:hover{
+    background-color: orangered;
+    color: white;
+}
+
+

@@ -1,0 +1,66 @@
+body
+{
+    font-family: 'Allerta', sans-serif;
+    background: url("../Imagenes/menu_ppal.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
+.boton{
+    cursor: pointer;
+}
+
+.boton:hover{
+    opacity: 0.3;
+}
+
+.Logo{
+    margin: 22% 0% 0% 33%;
+    position: absolute;
+}
+
+.BtnSalir{
+    margin: 8% 0% 0% -5%;
+    position: absolute;
+}
+
+.Botones_Principal{
+    display: flex;
+    justify-content: space-around;
+    margin: 63% 0px 0px 42%;
+    align-items: center;    
+    position: absolute;
+}
+
+.TitulosBotones{
+    display: flex;
+    justify-content: space-around;
+    margin: 51% 0px 0px 30%;
+    align-items: center;    
+    position: absolute;
+}
+
+.TitulosBotones h2{
+    margin-right: 31%;
+    text-align: center;
+}
+
+.textoBotones{
+    position: absolute;
+    margin: 0% 0% 0% 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    position: absolute;
+}
+
+.Botones_Principal .boton{
+    margin-right: 62%;
+}
+
+

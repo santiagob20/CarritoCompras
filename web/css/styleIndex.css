@@ -1,0 +1,42 @@
+body
+{
+    font-family: 'Allerta', sans-serif;
+    background: url("../Imagenes/FondoPrincipal.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.row{
+    margin: 0px 0px 0px 0px;
+}
+
+h1{
+    text-align: center;
+}
+
+.logo_carro, .btn-primary{
+    margin-top: 30px;
+}
+
+.caja{
+    z-index: 5;
+    background-color: white;
+    margin-top: 4%;
+}
+
+.encabezado{
+    color: white;
+    background-color: #122b40;
+    margin: 0px -15px 5px -15px;
+}
+
+.btn-primary:hover{
+    background-color: #eb9316;
+    border-bottom-color: #eb9316;
+}
+
+
+
+

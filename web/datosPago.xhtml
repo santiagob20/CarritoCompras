@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Página Default</title>
+        <h:link hreflang="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet"></h:link>
+        <h:link rel="stylesheet" hreflang="style.css"></h:link>
+        <h:outputStylesheet library="css" name="style.css"  />
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styledatosPago.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="Imagenes/salir.png" alt="Boton_Salir" class="boton BtnSalir" width="90" height="auto" onclick="location = 'Principal.xhtml'"></img>  
+            </div>
+            <div class="col-lg-8 caja">
+                <h:form class="form-group">
+                    <div class="row encabezado">
+                        <h1><b>Datos de pago</b></h1> 
+                    </div>
+                    <div class="form-row">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3><b>Nombre completo</b></h3>
+                                <b:inputText value="#{usuarioPago.nombre}" class="form-control" placeholder="Ingrese el nombre completo" />
+                            </div>
+                            <div class="col-lg-6">
+                                <h3><b>Direccion</b></h3>
+                                <b:inputText value="#{usuarioPago.direccion}" class="form-control" placeholder="ingrese la direccion"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3><b>Telefono</b></h3>
+                                <b:inputText value="#{usuarioPago.telefono}" class="center-block form-control" placeholder="Ingrese el telefono con indicativo del pais" />
+                            </div>
+                            <div class="col-lg-6">
+                                <h3><b>Numero de tarjeta</b></h3>
+                                <b:inputText value="#{usuarioPago.numTarjeta}" class="form-control" placeholder="ingrese un numero de tarjeta" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="col-lg-6">
+                                <h3><b>Tipo de tarjeta</b></h3>
+                                <div class="col-lg-6">
+                                    <b:radiobutton value="#{usuarioPago.tipoTarjeta}" itemLabel="MasterCard" /><b:radiobutton value="#{usuarioPago.tipoTarjeta}" itemLabel="Visa" />
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="Imagenes/MasterCard_logo.png" width="50" height="auto" alt="logo_clipboard" class="center-block logo_Mastercard"></img>
+                                    <img src="Imagenes/VISA_Logo.png" width="50" height="auto" alt="logo_carro" class="center-block logo_Visa"></img>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="Imagenes/logo_carro.png" width="110" height="auto" alt="logo_carro" class="center-block logo_carro"></img>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3><b>Codigo de seguridad</b></h3>
+                            <b:inputText value="#{usuarioPago.direccion}" class="form-control" placeholder="ingrese el codigo de seguridad"/>
+                            <b:commandButton id="registrar" value="Validar" action="#{producto.registrarP()}" class="botonValidar" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <b:commandButton id="Pagar" value="Pagar" action="#{producto.registrarP()}" class="center-block botonPagar btn btn-primary" />
+                        </div>
+                    </div>
+                </h:form>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
